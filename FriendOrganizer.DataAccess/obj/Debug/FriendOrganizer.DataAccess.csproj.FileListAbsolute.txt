@@ -1,0 +1,8 @@
+C:\Projects\githubProjects\WPFDemo\FriendOrganizer.DataAccess\bin\Debug\FriendOrganizer.DataAccess.dll
+C:\Projects\githubProjects\WPFDemo\FriendOrganizer.DataAccess\bin\Debug\FriendOrganizer.DataAccess.pdb
+C:\Projects\githubProjects\WPFDemo\FriendOrganizer.DataAccess\bin\Debug\FriendOrganizer.Model.dll
+C:\Projects\githubProjects\WPFDemo\FriendOrganizer.DataAccess\bin\Debug\FriendOrganizer.Model.pdb
+C:\Projects\githubProjects\WPFDemo\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.csprojResolveAssemblyReference.cache
+C:\Projects\githubProjects\WPFDemo\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.csproj.CoreCompileInputs.cache
+C:\Projects\githubProjects\WPFDemo\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.dll
+C:\Projects\githubProjects\WPFDemo\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.pdb
