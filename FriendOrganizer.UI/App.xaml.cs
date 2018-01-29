@@ -20,7 +20,7 @@ namespace FriendOrganizer.UI
         {
             var bootstrapper = new Bootstrapper();
             var container = bootstrapper.Bootstrap();
-
+            
             var mainWindow = container.Resolve<MainWindow>(); //With autofac (dependency injection) no need of this line of code: new MainWindow(new ViewModel.MainViewModel(new FriendDataService()));
             MainWindow.Show();
         }
