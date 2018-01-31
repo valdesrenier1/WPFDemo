@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using FriendOrganizer.Model;
 using Prism.Events;
 using FriendOrganizer.UI.Event;
+using System.Windows.Input;
+using Prism.Commands;
 
 namespace FriendOrganizer.UI.ViewModel
 {
@@ -23,6 +25,26 @@ namespace FriendOrganizer.UI.ViewModel
             _eventAggregator = eventAggregator;
             _eventAggregator.GetEvent<OpenFriendDetailViewEvent>()
                 .Subscribe(OnOpenFriendDetailView);
+
+            SaveCommand = new DelegateCommand(OnSaveExecute, OnSaveCanExecute);
+        }
+
+        private async void OnSaveExecute()
+        {
+            await _dataService.SaveAsync(Friend);
+            _eventAggregator.GetEvent<AfterFriendsSavedEvent>().Publish(
+                new AfterFriendsSavedEventArgs
+                {
+                    Id = Friend.Id,
+                    DisplayMember = $"{Friend.FirstName} {Friend.LastName}"
+                }
+                );
+        }
+
+        private bool OnSaveCanExecute()
+        {
+            //TODO: check if friend is valid
+            return true;
         }
 
         private async void OnOpenFriendDetailView(int friendId)
@@ -45,5 +67,8 @@ namespace FriendOrganizer.UI.ViewModel
                 OnPropertyChanged();
             }
         }
+
+        public ICommand SaveCommand { get; }
+
     }
 }
